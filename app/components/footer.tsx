@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { getCategories } from "../lib/queries"
 
-export default function Footer() {
+export default async function Footer() {
+
+  const cat = await getCategories();
+
   return (
     <footer className="relative mt-auto border-t border-slate-800/80 bg-slate-950/80 text-slate-400">
       {/* Top subtle glow */}
@@ -75,26 +79,14 @@ export default function Footer() {
               Categories
             </h3>
             <ul className="space-y-2 text-sm">
-              <li>
+
+              {cat.map((category, index) => (
+                <li key={index}>
                 <span className="hover:text-violet-400 transition-colors cursor-pointer">
-                  Web Development
+                  {category.name}
                 </span>
               </li>
-              <li>
-                <span className="hover:text-violet-400 transition-colors cursor-pointer">
-                  WordPress CMS
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-violet-400 transition-colors cursor-pointer">
-                  Next.js & React
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-violet-400 transition-colors cursor-pointer">
-                  UI/UX Design
-                </span>
-              </li>
+              ))}
             </ul>
           </div>
 

@@ -45,35 +45,6 @@ export default async function Home() {
             Explore carefully crafted articles, step-by-step guides, and practical insights on building fast, scalable web applications with React, Next.js, and WordPress.
           </p>
 
-          {/* Hero Actions & Search */}
-          <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <div className="relative flex-1 max-w-md">
-              <input
-                type="text"
-                placeholder="Search topics, tutorials, articles..."
-                readOnly
-                className="w-full bg-slate-900/90 border border-slate-700/80 rounded-2xl py-3.5 pl-11 pr-4 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-500 shadow-inner"
-              />
-              <svg
-                className="w-5 h-5 text-slate-500 absolute left-3.5 top-3.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </div>
-
-            <button className="px-6 py-3.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold text-sm rounded-2xl shadow-lg shadow-violet-600/30 transition-all duration-300 hover:scale-[1.02]">
-              Explore Guides
-            </button>
-          </div>
-
           {/* Quick Metrics */}
           <div className="pt-6 grid grid-cols-3 gap-6 border-t border-slate-800/80 text-slate-400">
             <div>
