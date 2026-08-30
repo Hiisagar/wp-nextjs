@@ -1,7 +1,17 @@
-import Image from "next/image";
+import { Categories } from "./components/categories"
+import { getCategories } from "./lib/queries"
 
-export default function Home() {
+export default async function Home() {
+
+  const cat = await getCategories();
+
   return (
-    <div>Home page wps</div>
+    <div>
+      <div>Home page wps</div>
+
+      <div>
+        <Categories cat={cat} />
+      </div>
+    </div>
   );
 }
